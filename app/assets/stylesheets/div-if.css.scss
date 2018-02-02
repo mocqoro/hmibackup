@@ -1,0 +1,132 @@
+.div-if-xl {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-xl {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 1000px) {
+    .div-if-xl {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-xl {
+        display: inline !important;
+        visibility: visible !important;
+    }
+}
+
+.div-if-lg {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-lg {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    .div-if-lg {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-lg {
+        display: inline !important;
+        visibility: visible !important;
+    }
+    
+}
+
+.div-if-med {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-med {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    .div-if-med {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-med {
+        display: inline !important;
+        visibility: visible !important;
+    }
+}
+
+.div-if-sm {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-sm {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+    .div-if-sm {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-sm {
+        display: inline !important;
+        visibility: visible !important;
+    }
+}
+
+.div-if-xs {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-xs {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 200px) and (max-width: 399px) {
+    .div-if-xs {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-xs {
+        display: inline !important;
+        visibility: visible !important;
+    }
+}
+
+.div-if-nano {
+    display: none;
+    visibility: hidden;
+}
+
+.span-if-nano {
+    display: none;
+    visibility: hidden;
+}
+
+@media (min-width: 0px) and (max-width: 199px) {
+    .div-if-nano {
+        display: block !important;
+        visibility: visible !important;
+    }
+    
+    .span-if-nano {
+        display: inline !important;
+        visibility: visible !important;
+    }
+}

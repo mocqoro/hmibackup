@@ -1,0 +1,52 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-striped {
+    
+}
+
+.table-striped th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+.table-striped tr:nth-child(even){
+    background-color: #f2f2f2
+}
+
+.table-header th {
+    background-color: #428bca;
+    color: white;
+}
+
+.table-divided-horizontal {
+    
+}
+
+.table-divided-horizontal th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-hover {
+    
+}
+
+.table-hover th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-hover tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-padding-narrow td {
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}

@@ -1,0 +1,110 @@
+.input {
+    border: 1px solid #c4c4c4; 
+    height: 30px;
+    width: 400px;
+    min-width: 400px;
+    @media only screen and (max-width:500px) {
+         width: 80%;
+         min-width: 80%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+    box-sizing: border-box;
+}
+ 
+.input:focus {
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+}
+
+.input-primary {
+    height: 30px;
+    width: 400px;
+    min-width: 400px;
+    @media only screen and (max-width:500px) {
+         width: 80%;
+         min-width: 80%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+}
+
+.input-primary:focus {
+    width: 500px;
+    min-width: 500px;
+    @media only screen and (max-width:500px) {
+         width: 100%;
+         min-width: 100%;
+    }
+}
+
+.input-readonly {
+    height: 35px;
+    font-size: 14px;
+    padding: 4px 15px 4px 15px;
+    border-radius: 8px 8px 8px 8px;
+    -moz-border-radius: 8px 8px 8px 8px;
+    -webkit-border-radius: 8px 8px 8px 8px;
+    box-shadow: 0px 0px 4px #d9d9d9;
+    -moz-box-shadow: 0px 0px 4px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 4px #d9d9d9;
+    box-sizing: border-box;
+}
+
+
+.input-xl {
+    height: 30px;
+    width: 400px;
+    min-width: 400px;
+    @media only screen and (max-width:500px) {
+         width: 80%;
+         min-width: 80%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+}
+
+.input-lg {
+    height: 25px;
+    width: 300px;
+    min-width: 300px;
+    @media only screen and (max-width:500px) {
+         width: 60%;
+         min-width: 60%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+}
+
+.input-sm {
+    height: 20px;
+    width: 200px;
+    min-width: 200px;
+    @media only screen and (max-width:500px) {
+         width: 40%;
+         min-width: 40%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+}
+
+.input-xs {
+    height: 15px;
+    width: 100px;
+    min-width: 100px;
+    @media only screen and (max-width:500px) {
+         width: 20%;
+         min-width: 20%;
+    }
+    font-size: 13px;
+    padding: 4px 4px 4px 4px;
+}

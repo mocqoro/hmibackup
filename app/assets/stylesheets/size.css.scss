@@ -1,0 +1,89 @@
+.size-force-fullwidth {
+    @media only screen and (max-width:500px) {
+         width: 80%;
+         &.input {min-width: 25px;}
+    }
+}
+
+.size-fullwidth {
+    width: 100%;
+    &.input {min-width: 100%;}
+}
+
+.size-extra-wide {
+    width: 400px;
+    &.input {min-width: 400px;}
+    @media only screen and (max-width:500px) {
+         width: 80%;
+         &.input {min-width: 80%;}
+         &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}
+
+.size-wide {
+    width: 300px;
+    &.input {min-width: 300px;}
+    @media only screen and (max-width:500px) {
+        width: 60%;
+        &.input {min-width: 60%;}
+        &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}
+
+.size-narrow {
+    width: 200px;
+    &.input {min-width: 200px;}
+    @media only screen and (max-width:500px) {
+        width: 40%;
+        &.input {min-width: 40%;}
+        &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}
+
+.size-extra-narrow {
+    width: 100px;
+    &.input {min-width: 100px;}
+    @media only screen and (max-width:500px) {
+        width: 20%;
+        &.input {min-width: 20%;}
+        &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}
+
+.size-width-mini {
+    width: 50px;
+    &.input {min-width: 50px;}
+    @media only screen and (max-width:500px) {
+        width: 10%;
+        &.input {min-width: 10%;}
+        &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}
+
+.size-width-micro {
+    width: 25px;
+    &.input {min-width: 25px;}
+    @media only screen and (max-width:500px) {
+        width: 5%;
+        &.input {min-width: 5%;}
+        &.size-force-fullwidth {
+            width: 80%;
+            &.input {min-width: 80%;}
+        }
+    }
+}

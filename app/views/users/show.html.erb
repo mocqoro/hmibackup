@@ -1,0 +1,15 @@
+<h1 align="center">Welcome to <%= @user.username %>'s page </h1>
+
+<div class="column-row">
+    <div class="column column-height-full column-2">
+    </div>
+    <div class="column column-height-full column-8">
+        <div class="text-center">
+            <div class="group" style="text-align: center;">
+                <span align="center"><%= gravatar_for @user, size: 150 %></span>
+            </div>
+        </div>
+    </div>
+    <div class="column column-height-full column-2">
+    </div>
+</div>

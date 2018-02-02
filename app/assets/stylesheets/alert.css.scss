@@ -1,0 +1,52 @@
+.alert-box {
+    color: #555;
+    border-radius: 5px;
+    font-family: Tahoma, Geneva, Arial, sans-serif;
+    font-size:11px;
+    padding: 10px 10px 10px 36px;
+    margin: 10px;
+}
+
+.alert-box span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.alert .danger {
+    background: #ffecec;
+    border: 1px solid #f5aca6;
+}
+
+.alert .success {
+    background: #e9ffd9;
+    border: 1px solid #a6ca8a;
+}
+
+.alert .warning {
+    background: #fff8c4;
+    border: 1px solid #f2c779;
+}
+
+.alert .info {
+    background: #e3f7fc;
+    border: 1px solid #8ed9f6;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: gray;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+.alert-text {
+    display: inline;
+}
