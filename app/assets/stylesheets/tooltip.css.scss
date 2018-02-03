@@ -3,6 +3,10 @@
     display: inline-block;
 }
 
+.tooltip-animated {
+    transition: opacity 1s;
+}
+
 .tooltip-right .tooltiptext {
     visibility: hidden;
     min-width: 50px;
@@ -17,7 +21,6 @@
     left: 110%;
     
     opacity: 0;
-    transition: opacity 1s;
 }
 
 .tooltip-right .tooltiptext:after {
@@ -45,7 +48,6 @@
     right: 110%;
     
     opacity: 0;
-    transition: opacity 1s;
 }
 
 .tooltip-left .tooltiptext:after {
@@ -74,7 +76,6 @@
     margin-left: -60px;
     
     opacity: 0;
-    transition: opacity 1s;
 }
 
 .tooltip-top .tooltiptext:after {
@@ -103,7 +104,6 @@
     margin-left: -60px;
     
     opacity: 0;
-    transition: opacity 1s;
 }
 
 .tooltip-bottom .tooltiptext:after {

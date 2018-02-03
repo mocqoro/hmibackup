@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'pages#home'
+  get '/discord', to: 'pages#discord'
   get '/signup', to: 'users#new'
   
   resources :users, except: [:new]

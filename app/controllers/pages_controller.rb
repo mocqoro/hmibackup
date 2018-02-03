@@ -5,4 +5,7 @@ class PagesController < ApplicationController
     def game
         
     end
+    def discord
+    
+    end
 end

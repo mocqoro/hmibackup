@@ -4,10 +4,16 @@
     <div class="column column-height-full column-2">
     </div>
     <div class="column column-height-full column-8">
-        <div class="text-center">
-            <div class="group" style="text-align: center;">
-                <span align="center"><%= gravatar_for @user, size: 150 %></span>
-            </div>
+        <div class="group text-center column-row">
+            <span><%= gravatar_for @user, size: 150, animated: true %></span>
+            <% if current_user == @user %>
+                <hr>
+                <div class="text-left">
+                    <%= link_to edit_user_path(@user), class: "btn btn-primary" do %>
+                        Settings <span class="material-icons icon">settings</span>
+                    <% end %>
+                </div>
+            <% end %>
         </div>
     </div>
     <div class="column column-height-full column-2">
