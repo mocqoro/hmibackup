@@ -15,7 +15,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save then
             session[:user_id] = @user.id
-           flash[:success] = "Welcome to Alphe Blog #{@user.username}!"
+           flash[:success] = "Welcome, #{@user.username}!"
            redirect_to user_path(@user)
         else
            render 'new' 
@@ -53,14 +53,17 @@ class UsersController < ApplicationController
     end
     
     def require_same_user
-        if current_user != @user and not current_user.admin? then
+        if not logged_in? then
+            flash[:danger] = "You can only edit your own account"
+			redirect_to root_path
+        elsif current_user != @user and not current_user.admin < @user.admin then
             flash[:danger] = "You can only edit your own account"
 			redirect_to root_path
         end
     end
     
     def require_admin
-        if logged_in? and not current_user.admin? then
+        if logged_in? and not current_user.admin > 0 then
             flash[:danger] = "Only admins can preform that acction"
             redirect_to root_path
         end

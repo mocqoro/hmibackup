@@ -9,9 +9,35 @@
 </head>
 <body>
 <%= render 'layouts/navigation' %>
+<%= render 'layouts/messages' %>
 <div class="container">
   <%= yield %>
 </div>
+
+<script>
+  function fade(element) {
+      var op = 1;  // initial opacity
+      var timer = setInterval(function () {
+          if (op <= 0.1){
+              clearInterval(timer);
+              element.style.display = 'none';
+          }
+          element.style.opacity = op;
+          element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+          op -= op * 0.1;
+      }, 25);
+  }
+  
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+      close[i].onclick = function() {
+          var div = this.parentElement;
+          fade(div);
+      }
+  }
+  </script>
 
 </body>
 </html>

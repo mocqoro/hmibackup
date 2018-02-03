@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Gamedev Canvas Workshop</title>
-    <style>
-    	* { padding: 0; margin: 0; }
-    	canvas { background: #eee; display: block; margin: 0 auto; }
-        .grid-container {
-            display: grid;
-            grid-template-columns: auto auto auto;
-        }
-        .grid-item {
-            padding: 5px;
-        }
-    </style>
-</head>
-<body>
+<meta charset="utf-8" />
+<title>Gamedev Canvas Workshop</title>
+<style>
+	* { padding: 0; margin: 0; }
+	canvas { background: #eee; display: block; margin: 0 auto; }
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    .grid-item {
+        padding: 5px;
+    }
+</style>
 
 <br>
 <div class="grid-container">
@@ -32,6 +27,7 @@
 </div>
 
 <script>
+/*
     function sleep(milliseconds) {
         var start = new Date().getTime();
         for (var i = 0; i < 1e7; i++) {
@@ -99,6 +95,8 @@
         leftPressed = false;
     
         score = 0;
+        
+        playing = true;
     }
     
     function collisionDetection() {
@@ -113,6 +111,7 @@
                         if(score == brickRowCount * brickColumnCount) {
                             alert("YOU WIN!");
                             resetValues();
+                            document.location.reload();
                         }
                     }
                 }
@@ -177,8 +176,9 @@
             if (y - ballRadius < 0) {
                 dy = -dy;
             } else if (y + ballRadius > canvas.height) {
-                alert("GAME OVER");
+                alert("GAME OVER" + playing);
                 resetValues();
+                document.location.reload();
             }
             
             if (y + ballRadius > canvas.height - paddleHeight && x > paddleX && x < paddleX + paddleWidth) {
@@ -198,6 +198,9 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
+    document.addEventListener('beforeunload', function(event) {
+        window.clearInterval(loop);
+    });
     function keyDownHandler(e) {
         var inputDevice = document.getElementById("inputDevice")
         if (inputDevice.value == "keyboard") {
@@ -239,8 +242,6 @@
             playing = true;
         }
     }
-    setInterval(draw, 10);
+    var loop = setInterval(draw, 10);
+*/
 </script>
-
-</body>
-</html>
