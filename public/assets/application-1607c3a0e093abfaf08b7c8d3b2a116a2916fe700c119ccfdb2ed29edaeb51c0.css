@@ -1,0 +1,2285 @@
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert {
+  color: #555;
+  border-radius: 5px;
+  font-family: Tahoma, Geneva, Arial, sans-serif;
+  font-size: 11px;
+  padding: 10px 10px 10px 36px;
+  margin: 10px;
+}
+
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert.danger {
+  background: #ffecec;
+  border: 1px solid #f5aca6;
+}
+
+/* line 20, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert.success {
+  background: #e9ffd9;
+  border: 1px solid #a6ca8a;
+}
+
+/* line 25, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert.warning {
+  background: #fff8c4;
+  border: 1px solid #f2c779;
+}
+
+/* line 30, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert.info {
+  background: #e3f7fc;
+  border: 1px solid #8ed9f6;
+}
+
+/* line 35, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.closebtn {
+  margin-left: 15px;
+  color: gray;
+  text-decoration: none;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* line 47, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.closebtn:hover {
+  color: black;
+}
+
+/* line 51, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/alert.css.scss */
+.alert-content {
+  display: inline;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn {
+  border: 1px solid #c4c4c4;
+  font-size: 13px;
+  color: #333;
+  padding: 5px 5px 5px 5px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn:focus {
+  outline: none;
+  border: 1px solid #7bc1f7;
+  box-shadow: 0px 0px 8px #7bc1f7;
+  -moz-box-shadow: 0px 0px 8px #7bc1f7;
+  -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+/* line 23, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn {
+  text-decoration: none;
+  text-align: center;
+}
+
+/* line 28, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn:hover {
+  color: #333;
+}
+
+/* line 32, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-xl {
+  border: 1px solid #c4c4c4;
+  font-size: 15px;
+  padding: 12px 12px 12px 12px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 45, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-lg {
+  border: 1px solid #c4c4c4;
+  font-size: 14px;
+  padding: 8px 8px 8px 8px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 58, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-sm {
+  border: 1px solid #c4c4c4;
+  font-size: 12px;
+  padding: 3px 3px 3px 3px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 71, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-xs {
+  border: 1px solid #c4c4c4;
+  font-size: 11px;
+  padding: 2px 2px 2px 2px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 84, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-mini {
+  border: 1px solid #c4c4c4;
+  font-size: 10px;
+  padding: 1px 1px 1px 1px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 97, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-micro {
+  border: 1px solid #c4c4c4;
+  font-size: 10px;
+  padding: 1px 1px 1px 1px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 110, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-round {
+  border-radius: 50px !important;
+  background: lightgray;
+}
+
+/* line 115, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-fullwidth {
+  width: 100%;
+}
+
+/* line 119, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-wide {
+  width: 400px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 119, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  .btn-wide {
+    width: 80%;
+  }
+}
+
+/* line 126, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-wide {
+  display: block;
+  width: 400px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 126, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  a.btn-wide {
+    width: 80%;
+  }
+}
+
+/* line 134, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-medium {
+  width: 250px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 134, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  .btn-medium {
+    width: 50%;
+  }
+}
+
+/* line 141, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-medium {
+  display: block;
+  width: 250px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 141, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  a.btn-medium {
+    width: 50%;
+  }
+}
+
+/* line 149, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-narrow {
+  width: 100px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 149, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  .btn-narrow {
+    width: 20%;
+  }
+}
+
+/* line 156, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-narrow {
+  display: block;
+  width: 100px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 156, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+  a.btn-narrow {
+    width: 20%;
+  }
+}
+
+/* line 164, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-padding-extra-wide {
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+/* line 169, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-padding-wide {
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+/* line 174, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-padding-narrow {
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+/* line 179, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-padding-extra-narrow {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+/* line 184, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-margin-extra-wide {
+  margin: 20px;
+}
+
+/* line 188, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-margin-wide {
+  margin: 12px;
+}
+
+/* line 192, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-margin-narrow {
+  margin: 8px;
+}
+
+/* line 196, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-margin-extra-narrow {
+  margin: 4px;
+}
+
+/* line 200, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+/* line 206, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-default:hover {
+  color: #333;
+}
+
+/* line 210, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-primary {
+  color: #fff;
+  background-color: #428bca;
+  border-color: #357ebd;
+}
+
+/* line 216, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-primary:hover {
+  color: #fff;
+}
+
+/* line 220, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-success {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+/* line 226, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-success:hover {
+  color: #fff;
+}
+
+/* line 230, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-info {
+  color: #fff;
+  background-color: #5bc0de;
+  border-color: #46b8da;
+}
+
+/* line 236, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-info:hover {
+  color: #fff;
+}
+
+/* line 240, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-warning {
+  color: #fff;
+  background-color: #f0ad4e;
+  border-color: #eea236;
+}
+
+/* line 246, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-warning:hover {
+  color: #fff;
+}
+
+/* line 250, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-danger {
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+}
+
+/* line 256, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-danger:hover {
+  color: #fff;
+}
+
+/* line 260, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+.btn-white {
+  color: #5e5e5e;
+  background-color: #fff;
+  border: 1px solid #e5e9ec;
+}
+
+/* line 266, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/button.css.scss */
+a.btn-white:hover {
+  color: #5e5e5e;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/card.css.scss */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* line 6, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/card.css.scss */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/card.css.scss */
+.card-container {
+  margin: 0px;
+  margin: 5px;
+  display: block;
+  height: 160px;
+  overflow: auto;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 7, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column {
+  float: left;
+}
+
+/* line 11, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-height-full {
+  height: 100vh;
+}
+
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-height-high {
+  height: 50px;
+}
+
+/* line 19, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-height-medium {
+  height: 25px;
+}
+
+/* line 23, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-height-low {
+  height: 10px;
+}
+
+/* line 27, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-1 {
+  width: 8.33%;
+}
+
+/* line 31, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-2 {
+  width: 16.66%;
+}
+
+/* line 35, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-3 {
+  width: 25%;
+}
+
+/* line 39, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-4 {
+  width: 33.33%;
+}
+
+/* line 43, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-5 {
+  width: 41.66%;
+}
+
+/* line 47, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-6 {
+  width: 50%;
+}
+
+/* line 51, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-7 {
+  width: 58.33%;
+}
+
+/* line 55, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-8 {
+  width: 66.66%;
+}
+
+/* line 59, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-9 {
+  width: 75%;
+}
+
+/* line 63, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-10 {
+  width: 83.33%;
+}
+
+/* line 67, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-11 {
+  width: 91.66%;
+}
+
+/* line 71, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+.column-12 {
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  /* line 76, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-xl {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 82, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-xl {
+    width: 8.33%;
+  }
+
+  /* line 86, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-xl {
+    width: 16.66%;
+  }
+
+  /* line 90, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-xl {
+    width: 25%;
+  }
+
+  /* line 94, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-xl {
+    width: 33.33%;
+  }
+
+  /* line 98, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-xl {
+    width: 41.66%;
+  }
+
+  /* line 102, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-xl {
+    width: 50%;
+  }
+
+  /* line 106, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-xl {
+    width: 58.33%;
+  }
+
+  /* line 110, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-xl {
+    width: 66.66%;
+  }
+
+  /* line 114, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-xl {
+    width: 75%;
+  }
+
+  /* line 118, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-xl {
+    width: 83.33%;
+  }
+
+  /* line 122, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-xl {
+    width: 91.66%;
+  }
+
+  /* line 126, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-xl {
+    width: 100%;
+  }
+}
+@media (min-width: 800px) and (max-width: 999px) {
+  /* line 132, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-lg {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 138, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-lg {
+    width: 8.33%;
+  }
+
+  /* line 142, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-lg {
+    width: 16.66%;
+  }
+
+  /* line 146, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-lg {
+    width: 25%;
+  }
+
+  /* line 150, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-lg {
+    width: 33.33%;
+  }
+
+  /* line 154, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-lg {
+    width: 41.66%;
+  }
+
+  /* line 158, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-lg {
+    width: 50%;
+  }
+
+  /* line 162, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-lg {
+    width: 58.33%;
+  }
+
+  /* line 166, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-lg {
+    width: 66.66%;
+  }
+
+  /* line 170, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-lg {
+    width: 75%;
+  }
+
+  /* line 174, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-lg {
+    width: 83.33%;
+  }
+
+  /* line 178, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-lg {
+    width: 91.66%;
+  }
+
+  /* line 182, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-lg {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  /* line 188, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-med {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 194, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-med {
+    width: 8.33%;
+  }
+
+  /* line 198, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-med {
+    width: 16.66%;
+  }
+
+  /* line 202, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-med {
+    width: 25%;
+  }
+
+  /* line 206, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-med {
+    width: 33.33%;
+  }
+
+  /* line 210, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-med {
+    width: 41.66%;
+  }
+
+  /* line 214, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-med {
+    width: 50%;
+  }
+
+  /* line 218, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-med {
+    width: 58.33%;
+  }
+
+  /* line 222, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-med {
+    width: 66.66%;
+  }
+
+  /* line 226, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-med {
+    width: 75%;
+  }
+
+  /* line 230, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-med {
+    width: 83.33%;
+  }
+
+  /* line 234, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-med {
+    width: 91.66%;
+  }
+
+  /* line 238, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-med {
+    width: 100%;
+  }
+}
+@media (min-width: 400px) and (max-width: 599px) {
+  /* line 244, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-sm {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 250, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-sm {
+    width: 8.33%;
+  }
+
+  /* line 254, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-sm {
+    width: 16.66%;
+  }
+
+  /* line 258, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-sm {
+    width: 25%;
+  }
+
+  /* line 262, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-sm {
+    width: 33.33%;
+  }
+
+  /* line 266, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-sm {
+    width: 41.66%;
+  }
+
+  /* line 270, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-sm {
+    width: 50%;
+  }
+
+  /* line 274, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-sm {
+    width: 58.33%;
+  }
+
+  /* line 278, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-sm {
+    width: 66.66%;
+  }
+
+  /* line 282, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-sm {
+    width: 75%;
+  }
+
+  /* line 286, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-sm {
+    width: 83.33%;
+  }
+
+  /* line 290, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-sm {
+    width: 91.66%;
+  }
+
+  /* line 294, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-sm {
+    width: 100%;
+  }
+}
+@media (min-width: 200px) and (max-width: 399px) {
+  /* line 300, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-xs {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 306, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-xs {
+    width: 8.33%;
+  }
+
+  /* line 310, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-xs {
+    width: 16.66%;
+  }
+
+  /* line 314, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-xs {
+    width: 25%;
+  }
+
+  /* line 318, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-xs {
+    width: 33.33%;
+  }
+
+  /* line 322, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-xs {
+    width: 41.66%;
+  }
+
+  /* line 326, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-xs {
+    width: 50%;
+  }
+
+  /* line 330, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-xs {
+    width: 58.33%;
+  }
+
+  /* line 334, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-xs {
+    width: 66.66%;
+  }
+
+  /* line 338, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-xs {
+    width: 75%;
+  }
+
+  /* line 342, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-xs {
+    width: 83.33%;
+  }
+
+  /* line 346, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-xs {
+    width: 91.66%;
+  }
+
+  /* line 350, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-xs {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) and (max-width: 199px) {
+  /* line 356, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-0-if-nano {
+    width: 0%;
+    display: none;
+    visibility: hidden;
+  }
+
+  /* line 362, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-1-if-nano {
+    width: 8.33%;
+  }
+
+  /* line 366, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-2-if-nano {
+    width: 16.66%;
+  }
+
+  /* line 370, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-3-if-nano {
+    width: 25%;
+  }
+
+  /* line 374, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-4-if-nano {
+    width: 33.33%;
+  }
+
+  /* line 378, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-5-if-nano {
+    width: 41.66%;
+  }
+
+  /* line 382, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-6-if-nano {
+    width: 50%;
+  }
+
+  /* line 386, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-7-if-nano {
+    width: 58.33%;
+  }
+
+  /* line 390, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-8-if-nano {
+    width: 66.66%;
+  }
+
+  /* line 394, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-9-if-nano {
+    width: 75%;
+  }
+
+  /* line 398, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-10-if-nano {
+    width: 83.33%;
+  }
+
+  /* line 402, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-11-if-nano {
+    width: 91.66%;
+  }
+
+  /* line 406, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-12-if-nano {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 412, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-1 {
+    width: 100%;
+  }
+
+  /* line 415, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-2 {
+    width: 100%;
+  }
+
+  /* line 418, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-3 {
+    width: 100%;
+  }
+
+  /* line 421, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-4 {
+    width: 100%;
+  }
+
+  /* line 424, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-5 {
+    width: 100%;
+  }
+
+  /* line 427, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-6 {
+    width: 100%;
+  }
+
+  /* line 430, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-7 {
+    width: 100%;
+  }
+
+  /* line 433, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-8 {
+    width: 100%;
+  }
+
+  /* line 436, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-9 {
+    width: 100%;
+  }
+
+  /* line 439, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-10 {
+    width: 100%;
+  }
+
+  /* line 442, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-11 {
+    width: 100%;
+  }
+
+  /* line 445, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse .column-12 {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  /* line 451, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-1 {
+    width: 33.33%;
+  }
+
+  /* line 454, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-2 {
+    width: 33.33%;
+  }
+
+  /* line 457, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-3 {
+    width: 33.33%;
+  }
+
+  /* line 460, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-4 {
+    width: 33.33%;
+  }
+
+  /* line 463, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-5 {
+    width: 33.33%;
+  }
+
+  /* line 466, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-6 {
+    width: 33.33%;
+  }
+
+  /* line 469, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-7 {
+    width: 33.33%;
+  }
+
+  /* line 472, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-8 {
+    width: 33.33%;
+  }
+
+  /* line 475, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-9 {
+    width: 33.33%;
+  }
+
+  /* line 478, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-10 {
+    width: 33.33%;
+  }
+
+  /* line 481, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-11 {
+    width: 33.33%;
+  }
+
+  /* line 484, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-third .column-12 {
+    width: 33.33%;
+  }
+}
+@media (max-width: 600px) {
+  /* line 490, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-1 {
+    width: 50%;
+  }
+
+  /* line 493, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-2 {
+    width: 50%;
+  }
+
+  /* line 496, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-3 {
+    width: 50%;
+  }
+
+  /* line 499, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-4 {
+    width: 50%;
+  }
+
+  /* line 502, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-5 {
+    width: 50%;
+  }
+
+  /* line 505, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-6 {
+    width: 50%;
+  }
+
+  /* line 508, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-7 {
+    width: 50%;
+  }
+
+  /* line 511, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-8 {
+    width: 50%;
+  }
+
+  /* line 514, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-9 {
+    width: 50%;
+  }
+
+  /* line 517, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-10 {
+    width: 50%;
+  }
+
+  /* line 520, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-11 {
+    width: 50%;
+  }
+
+  /* line 523, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/columns.css.scss */
+  .column-collapse-half .column-12 {
+    width: 50%;
+  }
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/details.css.scss */
+.icon-low {
+  vertical-align: text-bottom;
+}
+
+/* line 5, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/details.css.scss */
+.formfield * {
+  vertical-align: middle;
+}
+
+/* line 9, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/details.css.scss */
+.inline-block {
+  display: inline-block;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-xl {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 6, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-xl {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 1000px) {
+  /* line 12, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-xl {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 17, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-xl {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 23, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-lg {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 28, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-lg {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+  /* line 34, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-lg {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 39, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-lg {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 46, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-med {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 51, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-med {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+  /* line 57, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-med {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 62, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-med {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 68, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-sm {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 73, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-sm {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+  /* line 79, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-sm {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 84, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-sm {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 90, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-xs {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 95, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-xs {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 200px) and (max-width: 399px) {
+  /* line 101, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-xs {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 106, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-xs {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 112, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.div-if-nano {
+  display: none;
+  visibility: hidden;
+}
+
+/* line 117, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+.span-if-nano {
+  display: none;
+  visibility: hidden;
+}
+
+@media (min-width: 0px) and (max-width: 199px) {
+  /* line 123, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .div-if-nano {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  /* line 128, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/div-if.css.scss */
+  .span-if-nano {
+    display: inline !important;
+    visibility: visible !important;
+  }
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input {
+  border: 1px solid #c4c4c4;
+  height: 30px;
+  width: 400px;
+  min-width: 400px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 500px) {
+  /* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input {
+    width: 80%;
+    min-width: 80%;
+  }
+}
+
+/* line 21, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input:focus {
+  outline: none;
+  border: 1px solid #7bc1f7;
+  box-shadow: 0px 0px 8px #7bc1f7;
+  -moz-box-shadow: 0px 0px 8px #7bc1f7;
+  -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+/* line 29, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-primary {
+  height: 30px;
+  width: 400px;
+  min-width: 400px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 29, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-primary {
+    width: 80%;
+    min-width: 80%;
+  }
+}
+
+/* line 41, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-primary:focus {
+  width: 500px;
+  min-width: 500px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 41, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-primary:focus {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+/* line 50, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-readonly {
+  height: 35px;
+  font-size: 14px;
+  padding: 4px 15px 4px 15px;
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  box-shadow: 0px 0px 4px #d9d9d9;
+  -moz-box-shadow: 0px 0px 4px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 4px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 64, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-xl {
+  height: 30px;
+  width: 400px;
+  min-width: 400px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 64, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-xl {
+    width: 80%;
+    min-width: 80%;
+  }
+}
+
+/* line 76, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-lg {
+  height: 25px;
+  width: 300px;
+  min-width: 300px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 76, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-lg {
+    width: 60%;
+    min-width: 60%;
+  }
+}
+
+/* line 88, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-sm {
+  height: 20px;
+  width: 200px;
+  min-width: 200px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 88, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-sm {
+    width: 40%;
+    min-width: 40%;
+  }
+}
+
+/* line 100, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+.input-xs {
+  height: 15px;
+  width: 100px;
+  min-width: 100px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 100, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/input.css.scss */
+  .input-xs {
+    width: 20%;
+    min-width: 20%;
+  }
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/link.css.scss */
+.link {
+  color: black;
+  text-decoration: none;
+}
+
+/* line 6, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/link.css.scss */
+.link:hover {
+  color: #666;
+}
+
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/link.css.scss */
+.link-danger:hover {
+  color: #d9534f;
+}
+
+/* line 14, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/link.css.scss */
+.link-background {
+  padding: 3px 10px 3px 10px;
+  border-radius: 50px;
+  background: lightgray;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar {
+  display: block;
+  width: 100%;
+  height: 45px;
+  list-style-type: none;
+  border: 1px solid #e7e7e7;
+  background-color: #f3f3f3;
+}
+
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-body {
+  margin-top: 0;
+  padding-left: 0;
+}
+
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn {
+  float: left;
+}
+
+/* line 19, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-r {
+  float: right;
+}
+
+/* line 23, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-note {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 31, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 39, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link:hover {
+  background-color: #ddd;
+}
+
+/* line 43, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link-icon {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 4px 6px;
+  text-decoration: none;
+}
+
+/* line 51, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link-icon:hover {
+  background-color: #ddd;
+}
+
+/* line 55, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link-idle {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 10px;
+  text-decoration: none;
+}
+
+/* line 63, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-img {
+  display: block;
+  text-align: center;
+  padding: 5px 2px 5px 2px;
+  text-decoration: none;
+}
+
+/* line 70, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown {
+  position: relative;
+  display: inline-block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 79, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown:hover {
+  background-color: #ddd;
+}
+
+/* line 83, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown-body {
+  background-color: black;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  opacity: 0.0;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+/* line 96, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown:hover .navbar-dropdown-body {
+  visibility: visible;
+  opacity: 1.0;
+}
+
+/* line 101, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown-btn {
+  float: center;
+  width: 100%;
+}
+
+/* line 106, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-dropdown {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+
+/* line 114, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-btn-link:hover {
+  background-color: #ddd;
+}
+
+/* line 118, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown-btn-link {
+  display: block;
+  color: #666;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* line 126, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-dropdown-btn-link:hover {
+  background-color: #ddd;
+}
+
+/* line 130, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+a:hover {
+  color: #444;
+}
+
+/* line 134, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+#menu-icon {
+  display: none;
+  width: 80px;
+  height: 40px;
+  background: #4C8FEC;
+}
+
+/* line 141, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-body {
+  display: block;
+}
+
+/* line 145, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+.navbar-body li {
+  display: block;
+  display: inline-block;
+}
+
+/*MEDIA QUERY*/
+@media only screen and (max-width: 800px) {
+  /* line 152, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  header {
+    position: absolute;
+  }
+
+  /* line 156, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  #menu-icon {
+    display: block;
+  }
+
+  /* line 160, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  .navbar-body {
+    position: absolute;
+    padding: 10px;
+    background: #fff;
+    border: 5px solid #444;
+    right: 0%;
+    top: 60px;
+    width: 200px;
+    border-radius: 4px 0 4px 4px;
+    position: absolute;
+  }
+}
+@media only screen and (max-width: 800px) and (max-width: 200px) {
+  /* line 173, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  .navbar-body {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  /* line 178, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  .navbar-body li {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* line 183, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  .navbar-dropdown {
+    text-align: center;
+    float: center;
+    width: 100%;
+  }
+
+  /* line 190, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/navbar.css.scss */
+  .navbar-body {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  /* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 4, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-force-fullwidth.input {
+    min-width: 25px;
+  }
+}
+
+/* line 8, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-fullwidth {
+  width: 100%;
+}
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-fullwidth.input {
+  min-width: 100%;
+}
+
+/* line 13, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-extra-wide {
+  width: 400px;
+}
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-extra-wide.input {
+  min-width: 400px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 13, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-wide {
+    width: 80%;
+  }
+  /* line 18, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-wide.input {
+    min-width: 80%;
+  }
+  /* line 19, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-wide.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 21, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-wide.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+
+/* line 26, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-wide {
+  width: 300px;
+}
+/* line 28, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-wide.input {
+  min-width: 300px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 26, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-wide {
+    width: 60%;
+  }
+  /* line 31, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-wide.input {
+    min-width: 60%;
+  }
+  /* line 32, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-wide.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 34, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-wide.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+
+/* line 39, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-narrow {
+  width: 200px;
+}
+/* line 41, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-narrow.input {
+  min-width: 200px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 39, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-narrow {
+    width: 40%;
+  }
+  /* line 44, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-narrow.input {
+    min-width: 40%;
+  }
+  /* line 45, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-narrow.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 47, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-narrow.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+
+/* line 52, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-extra-narrow {
+  width: 100px;
+}
+/* line 54, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-extra-narrow.input {
+  min-width: 100px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 52, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-narrow {
+    width: 20%;
+  }
+  /* line 57, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-narrow.input {
+    min-width: 20%;
+  }
+  /* line 58, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-narrow.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 60, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-extra-narrow.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+
+/* line 65, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-width-mini {
+  width: 50px;
+}
+/* line 67, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-width-mini.input {
+  min-width: 50px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 65, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-mini {
+    width: 10%;
+  }
+  /* line 70, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-mini.input {
+    min-width: 10%;
+  }
+  /* line 71, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-mini.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 73, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-mini.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+
+/* line 78, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-width-micro {
+  width: 25px;
+}
+/* line 80, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+.size-width-micro.input {
+  min-width: 25px;
+}
+@media only screen and (max-width: 500px) {
+  /* line 78, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-micro {
+    width: 5%;
+  }
+  /* line 83, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-micro.input {
+    min-width: 5%;
+  }
+  /* line 84, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-micro.size-force-fullwidth {
+    width: 80%;
+  }
+  /* line 86, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/size.css.scss */
+  .size-width-micro.size-force-fullwidth.input {
+    min-width: 80%;
+  }
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.text-center {
+  text-align: center;
+}
+
+/* line 5, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.text-left {
+  text-align: left;
+}
+
+/* line 9, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.text-right {
+  text-align: right;
+}
+
+/* line 13, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.word-wrap {
+  word-wrap: break-word;
+}
+
+/* line 17, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.circular {
+  border-radius: 50%;
+}
+
+/* line 21, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/style.css.scss */
+.icon {
+  position: relative;
+  /* Adjust these values accordingly */
+  top: 8px;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 10, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-striped th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+/* line 15, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-striped tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* line 19, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-header th {
+  background-color: #428bca;
+  color: white;
+}
+
+/* line 28, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-divided-horizontal th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 38, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-hover th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* line 44, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-hover tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* line 48, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/table.css.scss */
+.table-padding-narrow td {
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/textarea.css.scss */
+.textarea {
+  border: 1px solid #c4c4c4;
+  height: 50px;
+  width: 400px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+@media only screen and (max-width: 500px) {
+  /* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/textarea.css.scss */
+  .textarea {
+    width: 80%;
+  }
+}
+
+/* line 21, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/textarea.css.scss */
+.textarea:focus {
+  outline: none;
+  border: 1px solid #7bc1f7;
+  box-shadow: 0px 0px 8px #7bc1f7;
+  -moz-box-shadow: 0px 0px 8px #7bc1f7;
+  -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
+
+/* line 29, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/textarea.css.scss */
+.textarea-readonly {
+  border: 1px solid #c4c4c4;
+  height: 50px;
+  font-size: 13px;
+  padding: 4px 4px 4px 4px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  box-shadow: 0px 0px 8px #d9d9d9;
+  -moz-box-shadow: 0px 0px 8px #d9d9d9;
+  -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+  box-sizing: border-box;
+}
+
+/* line 43, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/textarea.css.scss */
+.textarea-readonly:focus {
+  outline: none;
+  border: 1px solid lightgray;
+  box-shadow: 0px 0px 8px lightgray;
+  -moz-box-shadow: 0px 0px 8px lightgray;
+  -webkit-box-shadow: 0px 0px 8px lightgray;
+}
+@charset "UTF-8";
+/* line 8, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+div.timeline-container {
+  height: 400px;
+  height: 80vh;
+  margin: auto;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  max-height: 80vh;
+  width: 100%;
+}
+
+/* line 19, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+div.timeline-item {
+  display: flex;
+  flex: auto;
+  overflow-y: auto;
+  padding: 0rem 1rem 0rem 1rem;
+  border-style: solid;
+  border-color: black;
+}
+
+/* line 28, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline {
+  position: relative;
+  display: table;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5rem;
+}
+/* line 38, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline div:after {
+  content: '';
+  width: 2px;
+  position: absolute;
+  top: .5rem;
+  bottom: 0rem;
+  left: 60px;
+  z-index: 1;
+  background: #C5C5C5;
+}
+/* line 49, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline h3 {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem;
+  color: #888;
+  margin: 0;
+  font-size: 1em;
+  font-weight: 400;
+}
+@media (min-width: 62em) {
+  /* line 49, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+  .timeline h3 {
+    font-size: 1.1em;
+  }
+}
+/* line 63, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year {
+  position: relative;
+}
+/* line 65, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year:first-child section {
+  margin-top: -1.3em;
+  padding-bottom: 0px;
+}
+/* line 69, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section {
+  position: relative;
+  padding-bottom: 1.25em;
+  margin-bottom: 2.2em;
+}
+/* line 73, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section h4 {
+  position: absolute;
+  top: 0;
+  font-size: .9em;
+  font-weight: 400;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0 0 0 89px;
+  color: #C5C5C5;
+}
+@media (min-width: 62em) {
+  /* line 73, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+  .timeline section.timeline-year section h4 {
+    font-size: 1em;
+  }
+}
+/* line 88, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul {
+  list-style-type: none;
+  padding: 0 0 0 75px;
+  margin: -1.35rem 0 1em;
+  max-width: 32rem;
+  font-size: 1em;
+}
+@media (min-width: 62em) {
+  /* line 88, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+  .timeline section.timeline-year section ul {
+    font-size: 1.1em;
+    padding: 0 0 0 81px;
+  }
+}
+/* line 98, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul:first-of-type:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #C5C5C5;
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  left: 54px;
+  top: 3px;
+  z-index: 2;
+}
+/* line 110, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul li {
+  margin-left: .5rem;
+  margin-top: .8rem;
+}
+/* line 113, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul li:before {
+  content: '•';
+  margin-left: -.5rem;
+  padding-right: .3rem;
+}
+/* line 118, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul li:last-child {
+  margin-bottom: -2.8rem;
+}
+/* line 121, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/timeline.css.scss */
+.timeline section.timeline-year section ul li p {
+  display: inline;
+  color: #606060;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 6, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-right .tooltiptext {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 110%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* line 23, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-right .tooltiptext:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+/* line 34, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-left .tooltiptext {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 110%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* line 51, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-left .tooltiptext:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+/* line 62, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-top .tooltiptext {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* line 80, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-top .tooltiptext:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* line 91, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-bottom .tooltiptext {
+  visibility: hidden;
+  min-width: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+/* line 109, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip-bottom .tooltiptext:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+/* line 120, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/tooltip.css.scss */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+/* line 1, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/well.css.scss */
+.well {
+  padding: 19px;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* line 11, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/well.css.scss */
+.well-mini {
+  padding: 5px;
+  margin-bottom: 5px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* line 21, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/well.css.scss */
+.well-micro {
+  padding: 2px;
+  margin-bottom: 2px;
+  background-color: #f5f5f5;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* line 31, /home/ubuntu/rails_projects/hmi/app/assets/stylesheets/well.css.scss */
+.group {
+  padding: 19px;
+  margin-bottom: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ 
+ 
