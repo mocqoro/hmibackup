@@ -131,63 +131,7 @@ a:hover {
 	color: #444;
 }
 
-#menu-icon {
-    display: none;
-    width: 80px;
-	height: 40px;
-	background: #4C8FEC;
-}
-
-.navbar-body {
-	display: block;
-}
-
 .navbar-body li {
     display: block;
 	display: inline-block;
-}
-
-/*MEDIA QUERY*/
-@media only screen and (max-width : 800px) {
-	header {
-		position: absolute;
-	}
-
-	#menu-icon {
-		display: block;
-	}
-
-	.navbar-body {
-		position: absolute;
-		padding: 10px;
-		background: #fff;
-		border: 5px solid #444;
-		right: 0%;
-		top: 60px;
-		width: 200px;
-		border-radius: 4px 0 4px 4px;
-		position: absolute;
-	}
-	
-	@media only screen and (max-width : 200px) {
-	    .navbar-body {
-    		width: 100%;
-    	}
-	}
-
-	.navbar-body li {
-		text-align: center;
-		width: 100%;
-	}
-	
-	.navbar-dropdown {
-		text-align: center;
-		float: center;
-		width: 100%;
-		
-	}
-
-	.navbar-body {
-		display: none;
-	}
 }

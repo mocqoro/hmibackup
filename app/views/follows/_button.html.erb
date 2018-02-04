@@ -1,0 +1,11 @@
+<% if logged_in? %>
+    <% if current_user.follow?(followed_user) %>
+        <%= button_to unfollow_path(followed_user_id: followed_user.id), remote: true, method: :delete, :class => "btn btn-primary" do %>
+            <i class="icon-low material-icons" style="font-size: 20px;">supervisor_account</i> Unfollow
+        <% end %>
+    <% else %>
+        <%= button_to follow_path(followed_user_id: followed_user.id), remote: true, :class => "btn btn-primary" do %>
+            <i class="icon-low material-icons" style="font-size: 20px;">supervisor_account</i> Follow
+        <% end %>
+    <% end %>
+<% end %>

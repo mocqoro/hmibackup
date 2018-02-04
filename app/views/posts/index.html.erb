@@ -1,0 +1,53 @@
+<br>
+<%= link_to "Create new post", new_post_path, class: "btn btn-xs btn-primary" %>
+<br>
+<br>
+
+<script>
+$(document).ready(function() {
+  $("#search").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#table tr .search-field").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+
+<input class="input size-narrow" id="search" type="text" placeholder="Search...">
+  
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Created by</th>
+            <th>Created</th>
+            <th>Updated</th>
+        </tr>
+    </thead>
+    <tbody id="table">
+    <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.name %></td>
+            <td><%= truncate(post.body, length: 50) %></td>
+            <td><%= if post.user then link_to(post.user.username, user_path(post.user), :class => "link") else "Unknown" end %>
+            <% if logged_in? and (current_user == post.user or current_user.admin?) then %>
+                <td>
+                <%= div_for post do %>
+                    <%= render partial: "likes/button", locals: { post: post } %>
+                <% end %>
+                </td>
+                <td><%= link_to "Edit", edit_post_path(post), class: "btn btn-xs btn-primary" %></td>
+                <td><%= link_to "Delete", post_path(post), method: :delete, 
+                    data: {confirm: "Are you sure you want to delete this post?"}, 
+                    class: "btn btn-xs btn-danger" %></td>
+            <% else %>
+                <td><button class="btn btn-xs btn-primary" disabled>Edit</button></td>
+                <td><button class="btn btn-xs btn-danger" disabled>Delete</button></td>
+            <% end %>
+            <td><%= link_to "View", post_path(post), class: "btn btn-xs btn-success" %></td>
+        </tr>
+    <% end %>
+    </tbody>
+</table>

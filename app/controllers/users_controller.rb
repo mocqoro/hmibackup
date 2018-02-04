@@ -15,10 +15,10 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save then
             session[:user_id] = @user.id
-           flash[:success] = "Welcome, #{@user.username}!"
-           redirect_to user_path(@user)
+            flash[:success] = "Welcome, #{@user.username}!"
+            redirect_to user_path(@user)
         else
-           render 'new' 
+            render 'new' 
         end
     end
     
@@ -28,9 +28,9 @@ class UsersController < ApplicationController
     def update
         if @user.update(user_params) then
             flash[:success] = "Yout account was successfully updated"
-            redirect_to articles_path
+            redirect_to user_path(@user)
         else
-           render 'edit' 
+            render 'edit' 
         end
     end
     
@@ -39,13 +39,13 @@ class UsersController < ApplicationController
     
     def destroy
         @user.destroy
-        flash[:danger] = "User and all theirs articles have been destroyed"
+        flash[:danger] = "User and all theirs users have been destroyed"
         redirect_to users_path
     end
     
     private
     def user_params
-       params.require(:user).permit(:username, :email, :password)
+        params.require(:user).permit(:username, :email, :password, :description)
     end
     
     def set_user

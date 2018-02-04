@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   get '/discord', to: 'pages#discord'
   get '/signup', to: 'users#new'
   
+  match 'like', to: 'likes#like', via: :post
+  match 'unlike', to: 'likes#unlike', via: :delete
+  
+  match 'follow', to: 'follows#follow', via: :post
+  match 'unfollow', to: 'follows#unfollow', via: :delete
+  
   resources :users, except: [:new]
+  resources :posts
   
   get '/login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

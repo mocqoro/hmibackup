@@ -1,13 +1,40 @@
 <nav class="navbar">
-  <ul class="navbar-body" id="navbar-body">
+  <ul class="navbar-body span-if-nano span-if-xs span-if-sm">
+    <li class="navbar-btn"><span style="font-size:30px;cursor:pointer" onclick="openSideBar('mySidenav')"><i class="material-icons navbar-btn-link-icon" style="font-size: 38px;">menu</i></span></li>
+    <li class="navbar-btn"><%= link_to "home", root_path, :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" %></li>
+    <% if logged_in? then %>
+      <li class="navbar-btn-r"><%= link_to user_path(current_user), :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" do %><%= gravatar_for current_user, size: 38, animated: true %><% end %></li>
+      <li class="navbar-btn"><%= link_to "Logout", logout_path, method: :delete, :class => "navbar-btn-link" %></li>
+    <% else %>
+      <li class="navbar-btn"><%= link_to "Login", login_path, :class => "navbar-btn-link" %></li>
+    <% end %>
+  </ul>
+  <ul class="navbar-body span-if-med span-if-lg span-if-xl" id="navbar-body">
+    <span class="navbar-btn" style="font-size:30px;cursor:pointer" onclick="openSideBar('mySidenav')"><i class="material-icons navbar-btn-link-icon" style="font-size: 38px;">menu</i></span>
     <li class="navbar-btn"><%= link_to "home", root_path, :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" %></li>
     <li class="navbar-btn"><%= link_to "Users", users_path, :class => "navbar-btn-link" %></li>
+    <li class="navbar-btn"><%= link_to "Posts", posts_path, :class => "navbar-btn-link" %></li>
     <li class="navbar-btn"><%= link_to "Discord", discord_path, :class => "navbar-btn-link" %></li>
     <% if logged_in? then %>
-      <li class="navbar-btn-r"><%= link_to "person", user_path(current_user), :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" %></li>
+      <li class="navbar-btn-r"><%= link_to user_path(current_user), :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" do %><%= gravatar_for current_user, size: 38, animated: true %><% end %></li>
       <li class="navbar-btn"><%= link_to "Logout", logout_path, method: :delete, :class => "navbar-btn-link" %></li>
     <% else %>
       <li class="navbar-btn"><%= link_to "Login", login_path, :class => "navbar-btn-link" %></li>
     <% end %>
   </ul>
 </nav>
+
+<div id="mySidenav" class="sidebar">
+  <a href="javascript:void(0)" class="sidebar-btn sidebar-closebtn" onclick="closeSideBar('mySidenav')">&times;</a>
+  <%= link_to root_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">home</i> Home<% end %>
+  <%= link_to users_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">people</i> Users<% end %>
+  <%= link_to posts_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">description</i> Posts<% end %>
+  <%= link_to discord_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">chat</i> Discord<% end %>
+  <% if logged_in? then %>
+    <%= link_to user_path(current_user), :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">person</i> Your profile<% end %>
+    <%= link_to logout_path, method: :delete, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">power_settings_new</i> Logout<% end %>
+  <% else %>
+    <%= link_to login_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">lock_open</i> Login<% end %>
+    <%= link_to signup_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">person_add</i> Signup<% end %>
+  <% end %>
+</div>

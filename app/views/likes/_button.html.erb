@@ -1,0 +1,11 @@
+<% if logged_in? %>
+    <% if current_user.like?(post) %>
+        <%= button_to unlike_path(post_id: post.id), remote: true, method: :delete, :class => "btn btn-primary btn-sm" do %>
+            <i class="icon-low material-icons" style="font-size: 12px;">thumb_down</i> Unlike
+        <% end %>
+    <% else %>
+        <%= button_to like_path(post_id: post.id), remote: true, :class => "btn btn-primary btn-sm" do %>
+            <i class="icon-low material-icons" style="font-size: 12px;">thumb_up</i> Like
+        <% end %>
+    <% end %>
+<% end %>

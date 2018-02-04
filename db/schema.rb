@@ -11,7 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202010533) do
+ActiveRecord::Schema.define(version: 20180204013147) do
+
+  create_table "follows", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "follower_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "likes", ["post_id"], name: "index_likes_on_post_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "name"
+    t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "tags"
+    t.integer  "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
@@ -20,6 +46,7 @@ ActiveRecord::Schema.define(version: 20180202010533) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.integer  "admin",           default: 0
+    t.text     "description",     default: ""
   end
 
 end

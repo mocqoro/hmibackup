@@ -1,21 +1,68 @@
 <h1 align="center">Welcome to <%= @user.username %>'s page </h1>
 
 <div class="column-row">
-    <div class="column column-height-full column-2">
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
     </div>
-    <div class="column column-height-full column-8">
+    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-10-if-med column-8-if-lg column-8-if-xl column-row">
         <div class="group text-center column-row">
             <span><%= gravatar_for @user, size: 150, animated: true %></span>
+            <hr>
             <% if current_user == @user %>
-                <hr>
                 <div class="text-left">
                     <%= link_to edit_user_path(@user), class: "btn btn-primary" do %>
                         Settings <span class="material-icons icon">settings</span>
                     <% end %>
                 </div>
+            <% else %>
+                <div class="text-left">
+                    <%= div_for current_user, :style => "display: inline-block;" do %>
+                        <%= render partial: "follows/button", locals: { followed_user: @user } %>
+                    <% end %>
+                    <% @user.following.each do |follower| %>
+                        <%= follower.user.username %>
+                    <% end %>
+                </div>
             <% end %>
         </div>
+        <div class="column column-2">
+            Description:
+            <div class="group word-wrap height-px-120 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
+        <div class="column-8 float-left">
+            Description:
+            <div class="group word-wrap height-px-120 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
+        <div class="column column-2">
+            Description:
+            <div class="group word-wrap height-px-120 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+            Box:
+            <div class="group word-wrap height-px-200 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+            Box:
+            <div class="group word-wrap height-px-200 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+            Box:
+            <div class="group word-wrap height-px-200 overflow-scroll">
+                <%= @user.description %>
+            </div>
+        </div>
     </div>
-    <div class="column column-height-full column-2">
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
     </div>
 </div>
