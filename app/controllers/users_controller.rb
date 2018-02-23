@@ -1,10 +1,14 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:edit, :update, :show, :destroy]
-	before_action :require_same_user, only: [:edit, :update, :destroy]
+    before_action :set_user, only: [:edit, :update, :show, :destroy, :notifications, :read_all_notifications, :delete_all_notifications]
+	before_action :require_same_user, only: [:edit, :update, :destroy, :notifications, :read_all_notifications, :delete_all_notifications]
 	before_action :require_admin, only: [:destroy]
 	
     def index
 		@users = User.all
+    end
+    
+    def notifications
+        @notifications = Notification.where(:user => @user)
     end
     
     def new
@@ -43,6 +47,23 @@ class UsersController < ApplicationController
         redirect_to users_path
     end
     
+    def read_all_notifications
+        @notifications = Notification.where(:user => @user)
+        @notifications.each do |notification|
+            notification.read = true
+            notification.save
+        end
+        redirect_to :back
+    end
+    
+    def delete_all_notifications
+        @notifications = Notification.where(:user => @user)
+        @notifications.each do |notification|
+            notification.destroy
+        end
+        redirect_to :back
+    end
+    
     private
     def user_params
         params.require(:user).permit(:username, :email, :password, :description)
@@ -56,7 +77,7 @@ class UsersController < ApplicationController
         if not logged_in? then
             flash[:danger] = "You can only edit your own account"
 			redirect_to root_path
-        elsif current_user != @user and not current_user.admin < @user.admin then
+        elsif current_user != @user and current_user.admin < @user.admin then
             flash[:danger] = "You can only edit your own account"
 			redirect_to root_path
         end

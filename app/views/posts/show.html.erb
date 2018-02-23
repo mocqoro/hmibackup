@@ -49,7 +49,7 @@
             <%= @post.likes.length %> <%= @post.likes.length > 1 ? "users have" : "user has" %> liked this post
             <br>
             <div class="post-actions">
-               <% if logged_in? and (current_user == @post.user or current_user.admin?) %>
+                <% if logged_in? and (current_user == @post.user or current_user.admin?) %>
                     <%= link_to "Edit", edit_post_path(@post), class: "btn btn-xs btn-primary" %>
                 <%= link_to "Delete", post_path(@post), method: :delete, 
                     data: {confirm: "Are you sure you want to delete this post?"}, 
@@ -64,6 +64,55 @@
                 <% end %>
             </div>
         </div>
+        <hr>
+        <%= link_to "New Comment", "javascript:void(0)", class: "btn btn-sm btn-success", :onclick => "toggleElementDisplay('new_comment_form');" %>
+        <%= link_to "Back to posts listing", posts_path, :class => "btn btn-sm float-right" %>
+        <br>
+        <br>
+        <div class="group" style="visibility: hidden;display: none;" id="new_comment_form">
+            <%= form_tag comments_new_path, method: :post do %>
+                <%= hidden_field_tag "comment[post_id]", @post.id %>
+                <textarea class="textarea" name="comment[body]"></textarea>
+                <br>
+                <%= submit_tag "Submit", class: "btn btn-sm btn-primary" %>
+                <%= link_to "Cancle", "javascript:void(0)", class: "btn btn-sm", :onclick => "toggleElementDisplay('new_comment_form');" %>
+            <% end %>
+        </div>
+        <div class="">
+            <% Comment.where(post: @post).reverse_each.with_index do |comment, index| %>
+                <% if not comment.parent_comment_id then %>
+                    <div class="group">
+                        <% if comment.deleted then %>
+                            <div class="comment-deleted">This comment has been deleted</div>
+                            <% if comment.user == current_user then %><br><%= link_to "Undelete", undelete_comment_path(comment), method: :put, class: "btn btn-xs btn-primary" %><% end %>
+                            <br><br>
+                            <%= render "comments/child_comments", comment: comment, layer: 0 %>
+                        <% else %>
+                            <div class="comment"><%= simple_format(comment.body != "" ? comment.body : raw("<br>"), {}, wrapper_tag: 'span') %></div><br>
+                            <% if comment.created_at != comment.updated_at then %><small><sup>(edited)</sup></small><br><% end %>
+                            <small><sup><%= link_to @post.user.username, user_path(@post.user), class: "link" %></sup></small><br>
+                            <% if comment.user == current_user then %><%= link_to "Edit", edit_comment_path(comment), class: "btn btn-sm btn-primary" %><% end %>
+                            <% if comment.user == current_user then %><%= link_to "Delete", comment_path(comment), method: :delete, class: "btn btn-sm btn-danger" %><% end %>
+                            <%= comment.parent_comment_id %>
+                            <%= link_to "Reply", "javascript:void(0)", class: "btn btn-sm btn-success", :onclick => "toggleElementDisplay('reply_to_comment_0:#{index}_form');" %>
+                            <br>
+                            <br>
+                            <div class="group" style="visibility: hidden;display: none;" id="<%= "reply_to_comment_0:#{index}_form" %>">
+                                <%= form_tag comments_new_path, method: :post do %>
+                                    <%= hidden_field_tag "comment[post_id]", @post.id %>
+                                    <%= hidden_field_tag "comment[parent_comment]", comment.id %>
+                                    <textarea class="textarea" name="comment[body]"></textarea>
+                                    <br>
+                                    <%= submit_tag "Submit", class: "btn btn-sm btn-primary" %>
+                                    <%= link_to "Cancle", "javascript:void(0)", class: "btn btn-sm", :onclick => "toggleElementDisplay('reply_to_comment_0:#{index}_form');" %>
+                                <% end %>
+                            </div>
+                            <%= render "comments/child_comments", comment: comment, layer: 1 %>
+                        <% end %>
+                    </div>
+                <% end %>
+            <% end %>
+        </div>
     </div>
     
     <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
@@ -71,6 +120,6 @@
     </div>
     
     <div class="column column-12">
-        <%= link_to "Back to posts listing", posts_path, :class => "btn btn-sm" %>
+        <br>
     </div>
 </div>

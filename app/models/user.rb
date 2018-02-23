@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
     has_many :posts, dependent: :destroy
     has_many :likes, dependent: :destroy
-    has_many :posts, through: :likes
+    has_many :liked_posts, :through => :likes, :source => :post
     
     has_many :followers, :class_name => 'Follow', :foreign_key => 'user_id'
     has_many :following, :class_name => 'Follow', :foreign_key => 'follower_id' 
@@ -32,10 +32,10 @@ class User < ActiveRecord::Base
     
     # creates a new follow row with followed_user_id and user_id
     def follow!(follower)
-        puts '-----------------------------------------------------------------'
-        puts follower.username
-        puts self.username
-        puts '-----------------------------------------------------------------'
+        #puts '-----------------------------------------------------------------'
+        #puts follower.username
+        #puts self.username
+        #puts '-----------------------------------------------------------------'
         self.followers.create!(follower_id: follower.id)
     end
     
@@ -45,8 +45,20 @@ class User < ActiveRecord::Base
         follow.destroy!
     end
     
-    # returns true if a post is liked by user
+    # returns true if a follower is followed by user
     def follow?(follower)
         follower.following.any? {|e| e.user.id == self.id}
+    end
+    
+    # creates a notification with a user_id of this user (self)
+    def create_notification(title, body)
+        @notification = Notification.new
+		@notification.user = self
+		@notification.title = title
+		@notification.body = body
+		
+		# puts '--------------------------------', @notification.user_id, @notification.body
+		
+		@notification.save
     end
 end

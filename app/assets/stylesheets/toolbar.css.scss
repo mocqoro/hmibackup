@@ -1,0 +1,18 @@
+.toolbar-container {
+    position: relative;
+    overflow-y: hidden;
+}
+
+.toolbar-container .toolbar {
+    position: absolute;
+    border-radius: 4px 4px 0px 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0%;
+    transition: height 0.3s ease-out;
+}
+
+.toolbar-container:hover .toolbar {
+    height: 23px;
+}

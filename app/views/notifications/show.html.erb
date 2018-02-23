@@ -1,0 +1,21 @@
+<h1 align="center"><%= @notification.title %>:</h1>
+
+<div class="column-row">
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
+    </div>
+    
+    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-10-if-med column-8-if-lg column-8-if-xl">
+        <hr>
+        <%= link_to "Back", logged_in? ? notifications_user_path(current_user) : root_path, :class => "btn btn-sm btn-primary" %><br>
+        <br>
+        <div class="<%= @notification.read ? "well" : "group" %> overflow-hidden">
+            <%= @notification.body %>
+            <br><br>
+        </div>
+    </div>
+    
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
+    </div>
+</div>

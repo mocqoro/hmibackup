@@ -1,0 +1,54 @@
+<% if Comment.where(parent_comment_id: comment.id).length > 0 then %>
+    <div class="collapse-section" id="<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_more" %>" style="display: none; visibility: hidden;" data-collapsed="true">
+        <span style="cursor: pointer;"
+            onclick="hideElementSlideUp('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_content" %>');
+            toggleElementDisplay('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_more" %>');
+            toggleElementDisplay('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_less" %>')">
+            <small>Show comments</small><i class="material-icons icon-low" style="font-size: 18px;">expand_more</i>
+        </span>
+    </div>
+    <div class="collapse-section" id="<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_less" %>">
+        <span style="cursor: pointer;"
+            onclick="hideElementSlideUp('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_content" %>');
+            toggleElementDisplay('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_less" %>');
+            toggleElementDisplay('<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_show_more" %>')">
+            <small>Hide comments</small><i class="material-icons icon-low" style="font-size: 18px;">expand_less</i>
+        </span>
+    </div>
+     <div class="collapse-section" id="<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}_content" %>">
+        <div class="group" id="<%= "comment_#{comment.id}_sub_comments_div_layer_#{layer}" %>">
+            <% sub_comments = Comment.where(parent_comment_id: comment.id) %>
+            <% sub_comments.reverse_each.with_index do |comment, index| %>
+                <% if comment.deleted then %>
+                    <div class="comment-deleted">This comment has been deleted</div>
+                    <% if comment.user == current_user then %><br><%= link_to "Undelete", undelete_comment_path(comment), method: :put, class: "btn btn-xs btn-primary" %><% end %>
+                    <br><br>
+                    <%= render "comments/child_comments", comment: comment, layer: layer + 1 %>
+                <% else %>
+                    <div class="comment"><%= simple_format(comment.body != "" ? comment.body : raw("<br>"), {}, wrapper_tag: 'span') %></div><br>
+                    <% if comment.created_at != comment.updated_at then %><small><sup>(edited)</sup></small><br><% end %>
+                    <small><sup><%= link_to @post.user.username, user_path(@post.user), class: "link" %></sup></small><br>
+                    <% if comment.user == current_user then %><%= link_to "Edit", edit_comment_path(comment), class: "btn btn-sm btn-primary" %><% end %>
+                    <% if comment.user == current_user then %><%= link_to "Delete", comment_path(comment), method: :delete, class: "btn btn-sm btn-danger" %><% end %>
+                    <%= link_to "Reply", "javascript:void(0)", class: "btn btn-sm btn-success", :onclick => "toggleElementDisplay('reply_to_comment_#{layer}:#{index}_form');" %>
+                    <br>
+                    <br>
+                    <div class="group" style="visibility: hidden;display: none;" id="<%= "reply_to_comment_#{layer}:#{index}_form" %>">
+                        <%= form_tag comments_new_path, method: :post do %>
+                            <%= hidden_field_tag "comment[post_id]", @post.id %>
+                            <%= hidden_field_tag "comment[parent_comment]", comment.id %>
+                            <textarea class="textarea" name="comment[body]"></textarea>
+                            <br>
+                            <%= submit_tag "Submit", class: "btn btn-sm btn-primary" %>
+                            <%= link_to "Cancle", "javascript:void(0)", class: "btn btn-sm", :onclick => "toggleElementDisplay('reply_to_comment_#{layer}:#{index}_form');;" %>
+                        <% end %>
+                    </div>
+                    <%= render "comments/child_comments", comment: comment, layer: layer + 1 %>
+                <% end %>
+                <% if not index == sub_comments.length - 1 then %>
+                    <hr>
+                <% end %>
+            <% end %>
+        </div>
+    </div>
+<% end %>

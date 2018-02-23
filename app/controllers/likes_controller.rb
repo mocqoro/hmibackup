@@ -5,6 +5,8 @@ class LikesController < ApplicationController
       @user = current_user
       @post = Post.find(params[:post_id])
       @user.like!(@post)
+      # send notifications to the posts owner
+			@post.user.create_notification("#{current_user.username} liked your post, \"#{@post.name}\"", "#{current_user.username} liked your post, \"#{@post.name}\"")
       redirect_to :back
     end
     

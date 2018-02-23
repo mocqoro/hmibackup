@@ -14,8 +14,32 @@ Rails.application.routes.draw do
   match 'follow', to: 'follows#follow', via: :post
   match 'unfollow', to: 'follows#unfollow', via: :delete
   
+  match 'notifications/send', to: 'notifications#create', via: :post
+  
+  resources :notifications, only: [:show] do
+    member do
+      match :read, to: 'notifications#read', via: :post
+      match :delete, to: 'notifications#delete', via: :delete
+    end
+  end
+  
+  resources :users do
+    member do
+      get :notifications
+      post :read_all_notifications
+      post :delete_all_notifications
+    end
+  end
+  
   resources :users, except: [:new]
   resources :posts
+  resources :comments, except: [:new, :index, :show] do
+    member do
+      put :undelete
+    end
+  end
+  
+  post 'comments/new', to: 'comments#create'
   
   get '/login', to: 'sessions#new'
   post 'login', to: 'sessions#create'

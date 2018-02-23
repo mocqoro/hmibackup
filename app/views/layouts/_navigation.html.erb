@@ -16,7 +16,29 @@
     <li class="navbar-btn"><%= link_to "Posts", posts_path, :class => "navbar-btn-link" %></li>
     <li class="navbar-btn"><%= link_to "Discord", discord_path, :class => "navbar-btn-link" %></li>
     <% if logged_in? then %>
-      <li class="navbar-btn-r"><%= link_to user_path(current_user), :class => "navbar-btn-link-icon material-icons", :style => "font-size: 38px;" do %><%= gravatar_for current_user, size: 38, animated: true %><% end %></li>
+      <li class="navbar-btn-r"><%= link_to user_path(current_user), :class => "navbar-btn-link-icon-idle material-icons", :style => "font-size: 38px;" do %><%= gravatar_for current_user, size: 38, animated: true %><% end %></li>
+      <li class="navbar-btn-r">
+        <%= link_to notifications_user_path(current_user), :class => "navbar-btn-link-icon" do %>
+          <i class="icon-low material-icons" style="font-size: 38px;">notifications</i><!-- KEEP ME! comment to remove new line (destroys the layout)
+          --><span class="notify-bubble-container">
+            <% notifications = Notification.where(:user => current_user, :read => false).length %>
+            <% if notifications < 1 then %>
+            <% elsif notifications < 10 then %>
+              <span class="notify-bubble-small">
+                <%= notifications %>
+              </span>
+            <% elsif notifications < 100 then %>
+              <span class="notify-bubble">
+                <%= notifications %>
+              </span>
+            <% else %>
+              <span class="notify-bubble">
+                <%= "99+" %>
+              </span>
+            <% end %>
+          </span>
+        <% end %>
+      </li>
       <li class="navbar-btn"><%= link_to "Logout", logout_path, method: :delete, :class => "navbar-btn-link" %></li>
     <% else %>
       <li class="navbar-btn"><%= link_to "Login", login_path, :class => "navbar-btn-link" %></li>
@@ -31,6 +53,7 @@
   <%= link_to posts_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">description</i> Posts<% end %>
   <%= link_to discord_path, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">chat</i> Discord<% end %>
   <% if logged_in? then %>
+    <%= link_to notifications_user_path(current_user), :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">notifications</i> Notifications<% end %>
     <%= link_to user_path(current_user), :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">person</i> Your profile<% end %>
     <%= link_to logout_path, method: :delete, :class => "sidebar-btn" do %><i class="icon-low material-icons" style="font-size: 38px;">power_settings_new</i> Logout<% end %>
   <% else %>

@@ -19,6 +19,10 @@ class PostsController < ApplicationController
 		@post.user = current_user
 		
 		if @post.save then
+			# send notifications to all users who are following this user
+            current_user.following.each do |follower|
+                follower.user.create_notification("#{@post.user.username} created a new post, \"#{@post.name}\"", @post.body.truncate(250)) 
+            end
 			flash[:success] = "Post was successfully created"
 			redirect_to post_path(@post)
 		else

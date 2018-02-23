@@ -1,0 +1,35 @@
+.notify-bubble-container {
+    position: relative;
+}
+
+.notify-bubble {
+    position: absolute;
+    top: -20px;
+    right: -1px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 0.85em;
+    line-height: 0.65em;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px gray;
+    &:before { content: '\A'; white-space: pre; }
+}
+
+.notify-bubble-small {
+    position: absolute;
+    top: -20px;
+    right: -1px;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+    line-height: 0.4em;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px gray;
+    &:before { content: '\A'; white-space: pre; }
+}

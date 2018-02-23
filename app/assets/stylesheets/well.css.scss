@@ -32,6 +32,27 @@
     padding: 19px;
     margin: 2px;
     margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.group-mini {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: white;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+}
+
+.group-micro {
+    padding: 2px;
+    margin-bottom: 2px;
+    background-color: white;
     border: 1px solid #e3e3e3;
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);

@@ -25,40 +25,145 @@
                 </div>
             <% end %>
         </div>
-        <div class="column column-2">
-            Description:
-            <div class="group word-wrap height-px-120 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+            <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-0-if-med column-1-if-lg column-2-if-xl">
+                <br>
+            </div>
+            <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-10-if-lg column-8-if-xl">
+                Box:
+                <div class="group word-wrap height-px-200 overflow-scroll">
+                    <%= @user.description %>
+                </div>
+            </div>
+            <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-0-if-med column-1-if-lg column-2-if-xl">
+                <br>
             </div>
         </div>
-        <div class="column-8 float-left">
-            Description:
-            <div class="group word-wrap height-px-120 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+        <h4>Your posts:</h4>
+            <div class="group scrolling-wrapper">
+                <% Post.where(:user => @user).each do |post| %>
+                    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl scrolling-wrapper-card">
+                        <%= post.name %>:
+                        <div class="group word-wrap toolbar-container">
+                            <div class="height-px-200 overflow-scroll">
+                                <%= post.body %>
+                            </div>
+                            <div class="toolbar">
+                                <% if logged_in? then %>
+                                    <% if current_user == post.user or current_user.admin? %>
+                                        <%= link_to "Edit", edit_post_path(post), class: "btn btn-xs btn-primary" %>
+                                    <%= link_to "Delete", post_path(post), method: :delete, 
+                                        data: {confirm: "Are you sure you want to delete this post?"}, 
+                                        class: "btn btn-xs btn-danger" %>
+                                    <% end %>
+                                    <%= link_to "All posts", posts_path, class: "btn btn-xs btn-success" %>
+                                    <%= div_for post, :style => "display: inline-block;" do %>
+                                        <%= render partial: "likes/button", locals: { post: post } %>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
             </div>
         </div>
-        <div class="column column-2">
-            Description:
-            <div class="group word-wrap height-px-120 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+            <h4>Liked posts:</h4>
+            <div class="group scrolling-wrapper">
+                <% @user.liked_posts.each do |post| %>
+                    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                        <%= post.name %>:
+                        <div class="group word-wrap toolbar-container">
+                            <div class="height-px-200 overflow-scroll">
+                                <%= post.body %>
+                            </div>
+                            <div class="toolbar">
+                                <% if logged_in? then %>
+                                    <% if current_user == post.user or current_user.admin? %>
+                                        <%= link_to "Edit", edit_post_path(post), class: "btn btn-xs btn-primary" %>
+                                    <%= link_to "Delete", post_path(post), method: :delete, 
+                                        data: {confirm: "Are you sure you want to delete this post?"}, 
+                                        class: "btn btn-xs btn-danger" %>
+                                    <% end %>
+                                    <%= link_to "All posts", posts_path, class: "btn btn-xs btn-success" %>
+                                    <%= div_for post, :style => "display: inline-block;" do %>
+                                        <%= render partial: "likes/button", locals: { post: post } %>
+                                    <% end %>
+                                <% end %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
             </div>
         </div>
-        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
-            Box:
-            <div class="group word-wrap height-px-200 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+            <h4>Posts by your followers:</h4>
+            <div class="group scrolling-wrapper">
+                <% @user.following.each do |follower| %>
+                    <% follower.user.posts.each do |post| %>
+                        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                            <%= post.name %>:
+                            <div class="group word-wrap toolbar-container">
+                                <div class="height-px-200 overflow-scroll">
+                                    <%= post.body %>
+                                </div>
+                                <div class="toolbar">
+                                    <% if logged_in? then %>
+                                        <% if current_user == post.user or current_user.admin? %>
+                                            <%= link_to "Edit", edit_post_path(post), class: "btn btn-xs btn-primary" %>
+                                        <%= link_to "Delete", post_path(post), method: :delete, 
+                                            data: {confirm: "Are you sure you want to delete this post?"}, 
+                                            class: "btn btn-xs btn-danger" %>
+                                        <% end %>
+                                        <%= link_to "All posts", posts_path, class: "btn btn-xs btn-success" %>
+                                        <%= div_for post, :style => "display: inline-block;" do %>
+                                            <%= render partial: "likes/button", locals: { post: post } %>
+                                        <% end %>
+                                    <% end %>
+                                </div>
+                            </div>
+                        </div>
+                    <% end %>
+                <% end %>
             </div>
         </div>
-        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
-            Box:
-            <div class="group word-wrap height-px-200 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+            <h4>Followers:</h4>
+            <div class="group scrolling-wrapper">
+                <% @user.following.each do |follower| %>
+                    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                        <%= follower.user.username %>:
+                        <div class="group">
+                            <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                                <%= link_to gravatar_for(follower.user), user_path(follower.user), class: "link" %>
+                            </div>
+                            <div class="height-px-85 overflow-scroll">
+                                <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                                    <%= follower.user.description %>
+                                </div>
+                            </div>
+                        </div>
+                <% end %>
             </div>
         </div>
-        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
-            Box:
-            <div class="group word-wrap height-px-200 overflow-scroll">
-                <%= @user.description %>
+        <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-12-if-lg column-12-if-xl">
+            <h4>Users you are following:</h4>
+            <div class="group scrolling-wrapper">
+                <% @user.followers.each do |follower| %>
+                    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                        <%= follower.user.username %>:
+                        <div class="group">
+                            <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                                <%= gravatar_for follower.user %>
+                            </div>
+                            <div class="height-px-85 overflow-scroll">
+                                <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-12-if-med column-6-if-lg column-4-if-xl">
+                                    <%= follower.user.description %>
+                                </div>
+                            </div>
+                        </div>
+                <% end %>
             </div>
         </div>
     </div>

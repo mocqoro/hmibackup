@@ -1,0 +1,56 @@
+<h1 align="center">Notifications:</h1>
+<!--
+<% 'user home users sign-in-alt sign-out-alt bars bell file-alt'.split.each do |icon| %>
+    <i class="fas fa-<%= icon %>" style="color: #666;text-shadow: 1px 1px 1px #ccc;font-size: 38px;"></i>
+<% end %>
+-->
+<div class="column-row">
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
+    </div>
+    
+    <div class="column column-12-if-nano column-12-if-xs column-12-if-sm column-10-if-med column-8-if-lg column-8-if-xl">
+        <% if logged_in? and (current_user == @user or current_user.admin?) %>
+            <% if logged_in? and current_user.admin > 0 then %>
+                <%= div_for @user, :style => "display: inline-block;" do %>
+                    <%= button_to notifications_send_path(user_id: @user.id, notification_title: "title_created", notification_body: "body_created"), remote: true, :class => "btn btn-primary btn-sm" do %>
+                        New
+                    <% end %>
+                <% end %>
+            <% end %>
+            <%= div_for @user, :style => "display: inline-block;" do %>
+                <%= button_to read_all_notifications_user_path(user_id: @user.id, notification_title: "title_created", notification_body: "body_created"), remote: true, :class => "btn btn-danger btn-sm", 'data-disable-with' => "Loading..." do %>
+                    Mark all as read
+                <% end %>
+            <% end %>
+            <%= div_for @user, :style => "display: inline-block;" do %>
+                <%= button_to delete_all_notifications_user_path(user_id: @user.id, notification_title: "title_created", notification_body: "body_created"), remote: true, :class => "btn btn-danger btn-sm", 'data-disable-with' => "Loading..." do %>
+                    Delete all
+                <% end %>
+            <% end %>
+        <% end %>
+        <hr>
+        <% @notifications.each do |notification| %>
+            <strong><%= notification.title %>:</strong>
+            <div class="<%= notification.read ? "well" : "group" %> overflow-hidden toolbar-container">
+                <%= notification.body.truncate(100) %>
+                <br><br>
+                <div class="toolbar">
+                    <%= link_to "Read", notification_path(notification), class: "btn btn-sm btn-primary" %>
+                    <% if logged_in? and (current_user == @user or current_user.admin?) %>
+                        <%= div_for @user, :style => "display: inline-block;" do %>
+                            <%= button_to "Mark as read", read_notification_path(notification), remote: true, :class => "btn btn-sm btn-danger" %>
+                        <% end %>
+                        <%= div_for @user, :style => "display: inline-block;" do %>
+                            <%= button_to "Delete", delete_notification_path(notification), remote: true, method: :delete, :class => "btn btn-sm btn-danger" %>
+                        <% end %>
+                    <% end %>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    
+    <div class="column column-0-if-nano column-0-if-xs column-0-if-sm column-1-if-med column-2-if-lg column-2-if-xl">
+        <br>
+    </div>
+</div>
