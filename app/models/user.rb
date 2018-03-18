@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
     has_many :liked_posts, :through => :likes, :source => :post
     
     has_many :followers, :class_name => 'Follow', :foreign_key => 'user_id'
-    has_many :following, :class_name => 'Follow', :foreign_key => 'follower_id' 
+    has_many :following, :class_name => 'Follow', :foreign_key => 'follower_id'
+    
+    has_many :comments, as: :commentable
     
     before_save {self.email = email.downcase}
     validates :username, presence: true, uniqueness: {case_sensitive: false},

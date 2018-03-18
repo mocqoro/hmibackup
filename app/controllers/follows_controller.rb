@@ -11,7 +11,7 @@ class FollowsController < ApplicationController
         @user.follow!(@followed_user)
         # send notifications to user
         @followed_user.create_notification("#{@user.username} is now following you", "#{@user.username} is now following you")
-        redirect_to :back
+        redirect_back fallback_location: user_path(@followed_user)
     end
     
     def unfollow
@@ -25,6 +25,6 @@ class FollowsController < ApplicationController
         #puts '-----------------------------------------------------------------'
         @followed_user = User.find(params[:followed_user_id])
         @follow.destroy!
-        redirect_to :back
+        redirect_back fallback_location: user_path(@followed_user)
     end
 end

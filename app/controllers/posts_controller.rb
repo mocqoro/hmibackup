@@ -18,6 +18,10 @@ class PostsController < ApplicationController
 		@post = Post.new(post_params)
 		@post.user = current_user
 		
+		@post.tags = params[:post][:tags].split(',')
+		@post.tags.collect(&:strip!)
+		@post.tags.reject!(&:empty?)
+		
 		if @post.save then
 			# send notifications to all users who are following this user
             current_user.following.each do |follower|

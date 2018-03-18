@@ -53,7 +53,7 @@ class UsersController < ApplicationController
             notification.read = true
             notification.save
         end
-        redirect_to :back
+        redirect_back fallback_location: notifications_user_path(@user)
     end
     
     def delete_all_notifications
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
         @notifications.each do |notification|
             notification.destroy
         end
-        redirect_to :back
+        redirect_back fallback_location: notifications_user_path(@user)
     end
     
     private

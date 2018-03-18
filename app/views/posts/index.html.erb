@@ -7,7 +7,7 @@
 $(document).ready(function() {
   $("#search").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#table tr .search-field").filter(function() {
+    $("#table tr td .search-field").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });

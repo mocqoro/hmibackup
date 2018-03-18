@@ -79,21 +79,21 @@
             <% end %>
         </div>
         <div class="">
-            <% Comment.where(post: @post).reverse_each.with_index do |comment, index| %>
-                <% if not comment.parent_comment_id then %>
+            <!--
+            <% Comment.where(commentable: @post).each.with_index do |comment, index| %>
+                <% if not comment.commentable == "Comment" then %>
                     <div class="group">
                         <% if comment.deleted then %>
                             <div class="comment-deleted">This comment has been deleted</div>
                             <% if comment.user == current_user then %><br><%= link_to "Undelete", undelete_comment_path(comment), method: :put, class: "btn btn-xs btn-primary" %><% end %>
                             <br><br>
-                            <%= render "comments/child_comments", comment: comment, layer: 0 %>
+                            <%= render "comments/child_comments", comment: comment, row: 0, layer: 0 %>
                         <% else %>
                             <div class="comment"><%= simple_format(comment.body != "" ? comment.body : raw("<br>"), {}, wrapper_tag: 'span') %></div><br>
                             <% if comment.created_at != comment.updated_at then %><small><sup>(edited)</sup></small><br><% end %>
                             <small><sup><%= link_to @post.user.username, user_path(@post.user), class: "link" %></sup></small><br>
                             <% if comment.user == current_user then %><%= link_to "Edit", edit_comment_path(comment), class: "btn btn-sm btn-primary" %><% end %>
                             <% if comment.user == current_user then %><%= link_to "Delete", comment_path(comment), method: :delete, class: "btn btn-sm btn-danger" %><% end %>
-                            <%= comment.parent_comment_id %>
                             <%= link_to "Reply", "javascript:void(0)", class: "btn btn-sm btn-success", :onclick => "toggleElementDisplay('reply_to_comment_0:#{index}_form');" %>
                             <br>
                             <br>
@@ -107,11 +107,13 @@
                                     <%= link_to "Cancle", "javascript:void(0)", class: "btn btn-sm", :onclick => "toggleElementDisplay('reply_to_comment_0:#{index}_form');" %>
                                 <% end %>
                             </div>
-                            <%= render "comments/child_comments", comment: comment, layer: 1 %>
+                            <%= render "comments/child_comments", comment: comment, row: 0, layer: 1 %>
                         <% end %>
                     </div>
                 <% end %>
             <% end %>
+            -->
+            <%= render "comments/child_comments", comment: @post, row: 0, layer: 0 %>
         </div>
     </div>
     

@@ -8,4 +8,8 @@ class PagesController < ApplicationController
     def discord
     
     end
+    
+    def chat
+        
+    end
 end

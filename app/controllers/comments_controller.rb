@@ -13,47 +13,69 @@ class CommentsController < ApplicationController
 	def create
 		@comment = Comment.new(comment_params)
 		@comment.user = current_user
-		@comment.post = Post.find(params[:comment][:post_id])
-		@comment.parent_comment_id = params[:comment][:parent_comment]
+		if not params[:comment][:parent_comment] then
+			@comment.commentable = Post.find(params[:comment][:post_id])
+		else
+			@comment.commentable = Comment.find(params[:comment][:parent_comment])
+		end
+		
+		puts '----------------------------------------------------', @comment.commentable.id
 		
 		if @comment.save then
 			# send notifications to the posts owner
-			post.user.create_notification("#{current_user.username} commented on your post, \"#{@comment.post.name}\"", @comment.body.truncate(250)) 
-			flash[:success] = "Comment was successfully created"
-			redirect_to post_path(@comment.post)
+			if @comment.commentable_type == "Post" then
+				@comment.commentable.user.create_notification("#{current_user.username} commented on your post, \"#{@comment.commentable.name}\"", @comment.body.truncate(250)) 
+				flash[:success] = "Comment was successfully created"
+				redirect_to post_path(@comment.commentable)
+			else
+				flash[:success] = "Comment was successfully created"
+				redirect_to post_path(@comment.head_parent)
+			end
 		else
 			render 'new'
 		end
 	end
 	
 	def destroy
-		post = @comment.post
+		commentable = @comment.commentable
 		@comment.deleted = true
 		if @comment.save then
 			flash[:success] = "Comment was successfully deleted"
-			redirect_to post_path(post)
+			if @comment.commentable_type == "Post" then
+				redirect_to post_path(commentable)
+			else
+				redirect_to post_path(@comment.head_parent)
+			end
 		else
 			flash[:danger] = "Error deleting comment"
-			redirect_to post_path(post)
+			redirect_to post_path(commentable)
 		end
 	end
 	
 	def undelete
-		post = @comment.post
+		commentable = @comment.commentable
 		@comment.deleted = false
 		if @comment.save then
 			flash[:success] = "Comment was successfully undeleted"
-			redirect_to post_path(post)
+			if @comment.commentable_type == "Post" then
+				redirect_to post_path(commentable)
+			else
+				redirect_to post_path(@comment.head_parent)
+			end
 		else
 			flash[:danger] = "Error undeleted comment"
-			redirect_to post_path(post)
+			redirect_to post_path(commentable)
 		end
 	end
 	
 	def update
 		if @comment.update(comment_params) then
 			flash[:success] = "Comment was successfully updated"
-			redirect_to post_path(@comment.post)
+			if @comment.commentable_type == "Post" then
+				redirect_to post_path(commentable)
+			else
+				redirect_to post_path(@comment.head_parent)
+			end
 		else
 			render 'edit'
 		end

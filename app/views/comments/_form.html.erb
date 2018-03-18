@@ -18,5 +18,5 @@
         <%= f.text_area :body, rows: 4, class: "textarea form-control", placeholder: "Comment body", autofocus: true %>
         <hr>
         <%= f.submit class: "btn btn-primary"%>
-        <%= link_to "Back to posts", post_path(@comment.post), class: 'btn btn-sm float-right' %>
+        <%= link_to "Back to posts", post_path(@comment.commentable), class: 'btn btn-sm float-right' %>
 <% end %>

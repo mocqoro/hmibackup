@@ -7,7 +7,7 @@ class LikesController < ApplicationController
       @user.like!(@post)
       # send notifications to the posts owner
 			@post.user.create_notification("#{current_user.username} liked your post, \"#{@post.name}\"", "#{current_user.username} liked your post, \"#{@post.name}\"")
-      redirect_to :back
+      redirect_back fallback_location: post_path(@post)
     end
     
     def unlike
@@ -15,6 +15,6 @@ class LikesController < ApplicationController
       @like = @user.likes.find_by_post_id(params[:post_id])
       @post = Post.find(params[:post_id])
       @like.destroy!
-      redirect_to :back
+      redirect_back fallback_location: post_path(@post)
     end
 end

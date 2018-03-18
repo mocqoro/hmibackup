@@ -5,21 +5,23 @@ class NotificationsController < ApplicationController
 	def create
 		@user = User.find(params[:user_id])
 		@user.create_notification(params[:notification_title], params[:notification_body])
-		redirect_to :back
+		redirect_back fallback_location: root_path
 	end
 	
 	def show
 	end
 	
 	def read
+		@user = @notification.user
 		@notification.read_notification
-		redirect_to :back
+		redirect_back fallback_location: notifications_user_path(@user)
 	end
 	
 	def delete
+		@user = @notification.user
 		@notification.destroy
 		flash[:success] = "Notification was successfully deleted"
-		redirect_to :back
+		redirect_back fallback_location: notifications_user_path(@user)
 	end
 	
 	private
