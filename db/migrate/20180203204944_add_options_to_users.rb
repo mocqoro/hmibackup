@@ -1,4 +1,4 @@
-class AddOptionsToUsers < ActiveRecord::Migration
+class AddOptionsToUsers < ActiveRecord::Migration[5.1]
   def change
     add_column :users, :settings, :text
   end
